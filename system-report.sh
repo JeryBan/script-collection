@@ -5,7 +5,6 @@ if [[ "$EUID" -ne 0 ]]; then
 	sleep 2
 fi
 
-################################################
 # Change these values depending on the services you are using.
 ssh_service="sshd"
 sql_service="mssql-server"
@@ -126,6 +125,8 @@ select option in "${menu_items[@]}"; do
 			;;
 			
 		"Exit")
+			echo "Exiting..."
+			sleep 1
 			break;
 			;;
 	esac
