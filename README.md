@@ -5,6 +5,7 @@ A collection of scripts for new programmers, for basic admin opperations and oth
 1. [system-report](#system-report)
 2. [custom-backup](#custom-backup)
 3. [create-user](#create-user)
+4. [localnet-scan](#localnet-scan)
 ---
 
 ### system-report
@@ -19,3 +20,6 @@ Backing up of /etc /boot ~/.config directories on demand, so you can be safe whi
 
 Create new users and asign them to groups you create or to already existing ones. 
 
+### localnet-scan
+
+Performs an arp scan in your local network and then scans whoever responded with nmap, for open ports with the corresponding service and OS detection. You may need to disable automatic DNS on devices like smartphones and laptops in order for the arp scan to find them.
