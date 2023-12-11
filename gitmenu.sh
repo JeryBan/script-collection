@@ -2,11 +2,11 @@
 
 actions=("Git Configuration" 
 	 "Git Initialization" 
-	 "Git Push | Update remote repository with local objects." 
 	 "Git Pull | Fetch from and integrate with another repository."
+	 "Git Push | Update remote repository with local objects." 
 	 "Branching | List, create, or delete branches."
 	 "Merging | Join two or more development histories together."
-	 "Reseting | Reset current HEAD to the specified state"
+	 "Reseting | Reset current HEAD to the specified state."
 	 "Check log | Show commit logs."
 	 "Exit") 
 
@@ -31,22 +31,24 @@ select action in "${actions[@]}"; do
 			echo "git clone https://github.com/example/repository.git, to copy a remote repository locally."
 			echo "------------------------"
 			echo
+			;;			
+			
+		"Git Pull | Fetch from and integrate with another repository.")
+			echo "- git pull origin <remote-brance>, sync with the remote directory"
+			echo "- git fetch origin <remote-brance>, like git-pull but doesnt automaticaly merges the changes to your local branch. Use it when you want to inspect the changes and use git-merge to apply them if you agree." 
+			echo "------------------------"
+			echo
 			;;
 			
 		"Git Push | Update remote repository with local objects.")
 			echo "- git status, check the changes"
-			echo "- git add <file1> <file2>.. , add the files you want to commit to the staging area ( . for selecting all files)"
-			echo "- git commit -m\"Your message here\", commit the changes with a comment"
-			echo "- git push origin <remote-brance-name>, push the changes to the correct remote directory"
+			echo "- git add <file1> <file2>.. , add the files you want to commit to the staging area ( . for selecting all files.)"
+			echo "- git commit -m\"Your message here\", commit the changes with a comment."
+			echo "- git push origin <remote-brance-name>, push the changes to the correct remote directory."
 			echo "------------------------"
 			echo
 			;;
-			
-		"Git Pull | Fetch from and integrate with another repository.")
-			echo "- git pull origin <remote-brance-name>, sync with the remote directory"
-			echo "------------------------"
-			echo
-			;;
+						
 		"Branching | List, create, or delete branches.")
 			echo "- git branch -m <name>, move/rename a branch."
 			echo "- git branch -d <name>, delete a branch."
@@ -60,9 +62,17 @@ select action in "${actions[@]}"; do
 			echo "- git merge --no-ff <branch>, disable fast forward to keep log of all the commits."
 			echo "------------------------"
 			echo
-			;;			
+			;;	
+			
+		"Reseting | Reset current HEAD to the specified state.")
+			echo "- git reset, reset any files uploaded in the staged area."
+			echo "- git reset --soft HEAD~n, reset HEAD (n) commits back while keeping the changes."
+			echo "- git reset --hard HEAD~n, reset HEAD (n) commits and discard all changes."
+			echo "------------------------"
+			echo
+			;;		
 		
-		"Check log")
+		"Check log | Show commit logs.")
 			echo "- git log"
 			echo "- git log --oneline, simplified format in one line."
 			echo "------------------------"
@@ -77,5 +87,5 @@ select action in "${actions[@]}"; do
 	esac
 done
 
-#git reset --soft HEAD~1
+
 			
