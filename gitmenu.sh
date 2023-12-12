@@ -44,7 +44,7 @@ select action in "${actions[@]}"; do
 			echo "- git status, check the changes"
 			echo "- git add <file1> <file2>.. , add the files you want to commit to the staging area ( . for selecting all files.)"
 			echo "- git commit -m\"Your message here\", commit the changes with a comment."
-			echo "- git push origin <remote-brance-name>, push the changes to the correct remote directory."
+			echo "- git push origin <remote-brance>, push the changes to the correct remote directory."
 			echo "------------------------"
 			echo
 			;;
@@ -53,6 +53,7 @@ select action in "${actions[@]}"; do
 			echo "- git branch -m <name>, move/rename a branch."
 			echo "- git branch -d <name>, delete a branch."
 			echo "- git branch -a, list all branches (local and remote ones."
+			echo "- git checkout <branch>, switch to another branch."
 			echo "------------------------"
 			echo
 			;;
