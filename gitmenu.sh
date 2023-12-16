@@ -50,10 +50,16 @@ select action in "${actions[@]}"; do
 			;;
 						
 		"Branching | List, create, or delete branches.")
-			echo "- git branch -m <name>, move/rename a branch."
-			echo "- git branch -d <name>, delete a branch."
-			echo "- git branch -a, list all branches (local and remote ones."
+			echo "- git branch <name>, create a branch."
 			echo "- git checkout <branch>, switch to another branch."
+			echo "- git checkout -b <name>, create and move to new branch at the same time."
+			echo
+			echo "- git branch -d <name>, delete a branch."
+			echo "- git branch, list branches/ -a to list all (local and remote ones)."
+			echo
+			echo "- git branch --merged, and" 
+			echo "- git branch --no-merged, list branches that you have or have not
+yet merged into the branch you’re currently on."
 			echo "------------------------"
 			echo
 			;;
@@ -66,7 +72,11 @@ select action in "${actions[@]}"; do
 			;;	
 			
 		"Reseting | Reset current HEAD to the specified state.")
-			echo "- git reset, reset any files uploaded in the staged area."
+			echo "- git commit --amend, change something minor in your initial commit.. You end up with a single commit — the second commit replaces the results of the first."
+			echo
+			echo "- git restore --staged <file>, changes made to <file> are moved from staging area back to working directory i.e unstage"
+			echo "- git restore <file>, discard changes you made. revert file's state to the previous commit."
+			echo	
 			echo "- git reset --soft HEAD~n, reset HEAD (n) commits back while keeping the changes."
 			echo "- git reset --hard HEAD~n, reset HEAD (n) commits and discard all changes."
 			echo "------------------------"

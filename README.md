@@ -1,4 +1,4 @@
-# script-collection
+# About
 A collection of scripts for new programmers, for basic admin opperations and other utilities. I encourage you to play around with these scripts, understand them and customize them as you want.
 
 ## Table of Contents
@@ -12,7 +12,7 @@ A collection of scripts for new programmers, for basic admin opperations and oth
 
 ### system-report
 
-Provides the basic information of a system's specifications, netowrk statistics and services. Should be run with sudo privillages.
+Provides the basic information of a system's specifications, netowrk statistics and services. Should be run with sudo privilages.
 
 ### custom-backup
 
@@ -28,7 +28,7 @@ Performs an arp scan in your local network and then scans whoever responded with
 
 ### firewall-setup
 
-These rules make a good firewall configuration for a home setup. In short it allows you to establish new connection but deny ones from outside. Script should be run with root previllages. If you want to revert the changes you made after running the script run `sudo iptables -F`. Run `sudo iptables -vnL` to list the new rules. If you want the firewall to persist after a boot you have to make this script run automatically on boot. 
+These rules make a good firewall configuration for a home setup. In short it allows you to establish new connection but deny ones from outside. Script should be run with root previlages. If you want to revert the changes you made after running the script run `sudo iptables -F`. Run `sudo iptables -vnL` to list the new rules. If you want the firewall to persist after a boot you have to make this script run automatically on boot (add it to crontab). 
 
 ### gitmenu
 
